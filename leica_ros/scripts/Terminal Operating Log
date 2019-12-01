@@ -1,0 +1,10 @@
+Terminal Code 
+roscore
+rosrun leica_ros leica_teleop.py cmd_vel:=/leica_node/cmd_vel
+rosrun leica_ros leica_node.py
+rosrun joy joy_node 
+rostopic echo /leica_node/cmd_vel
+rqt
+
+Manual
+http://www.surveyequipment.com/PDFs/FlexLine_GeoCOM_Manual_en.pdf

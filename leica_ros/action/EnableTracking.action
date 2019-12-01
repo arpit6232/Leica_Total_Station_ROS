@@ -1,0 +1,9 @@
+#Enable tracking action
+uint8 prismType
+---
+#Response
+string status
+int8 rc
+---
+#Feedback
+string status

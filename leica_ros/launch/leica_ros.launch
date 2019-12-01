@@ -1,0 +1,17 @@
+<!-- <launch>
+    <node pkg="leica_ros" type="leica_teleop" name="leica_joy" output="screen" >
+        <remap from="image_rect" to="$(arg camera_name)/$(arg image_topic)" />
+    <node pkg="leica_ros" type="leica_node" name="leica_node" output="screen" />
+    
+    <node pkg="leica_ros" type="leica_joy" name="leica_joy" >
+        <remap from="image_rect" to="$(arg camera_name)/$(arg image_topic)" />
+        <remap from="camera_info" to="$(arg camera_name)/camera_info" />
+</launch> -->
+
+<launch>
+    <node pkg="leica_ros" type="leica_teleop.py" name="leica_joy" args="cmd_vel:=/leica_node/cmd_vel" />
+    <node pkg="leica_ros" type="leica_node.py" name="leica_node" output="screen" />
+    <!-- assumes ds4drv is running -->
+    <node name="joy_node" pkg="joy" type="joy_node"/>
+  
+</launch>
